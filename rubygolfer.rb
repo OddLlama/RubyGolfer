@@ -14,6 +14,7 @@ end
 
 class Array
   alias l length
+  alias e each
   alias d delete
   alias i index
   alias p push
@@ -23,9 +24,8 @@ class Array
   alias h shift
 end
 
-class Enumerable
+module Enumerable
   alias m map
-  alias e each
   alias ec each_cons
   alias es each_slice
   alias ei each_with_index
@@ -44,6 +44,7 @@ class String
   alias k scan
   alias p split
   alias e each_char
+  alias v reverse
   alias ec each_codepoint
   alias eb each_byte
   alias el each_line
@@ -51,7 +52,6 @@ class String
   alias rj rjust
   alias cj center
   alias ut upto
-  alias dt downto
   alias uc upcase
   alias dc downcase
   alias sc swapcase
