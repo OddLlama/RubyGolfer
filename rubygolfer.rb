@@ -81,4 +81,12 @@ def gc
   gets.chomp
 end
 
-load ARGV[0]
+f = open(ARGV.shift)
+lines = f.readlines
+subs = lines.take_while {|x| x[0] == ?# }
+program = lines * ""
+subs.each {|s|
+  pos = s.rindex '#'
+  program.gsub! Regexp.new(s[1...pos]), s[pos+1..-2]
+}
+eval program
