@@ -18,7 +18,7 @@ There is also support for a `#define`-like syntax:
 For example:
 
     #potato#(
-    #potaao#}
+    #potaao#)
     putspotato'test'potaao # prints 'test'
     
 Example with regex:
